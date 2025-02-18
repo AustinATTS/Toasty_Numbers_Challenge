@@ -5,7 +5,6 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/bg_atts"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
@@ -34,19 +33,20 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_gravity="start|center_vertical"
-                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:contentDescription="@string/logo_description"
                 android:src="@drawable/ic_logo" />
-            <!--android:contentDescription="@string/logo_description"-->
 
             <TextView
                 android:id="@+id/tv_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:paddingLeft="10dp"
                 android:text="@string/app_name"
-                android:layout_marginLeft="8dp"
                 android:textColor="@color/white_atts"
-                android:textSize="20.0sp"/>
+                android:textSize="20.0sp" />
 
             <ImageButton
                 android:id="@+id/ibtn_settings"
@@ -54,10 +54,10 @@
                 android:layout_height="48dp"
                 android:layout_gravity="end|center_vertical"
                 android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/button_settings_description"
                 android:src="@drawable/ic_settings"
-                android:tint="@android:color/white"
-                android:layout_marginRight="8dp" />
-            <!--android:contentDescription="@string/settings_description"-->
+                app:tint="@color/white_atts"
+                android:layout_marginEnd="8dp" />
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -77,10 +77,9 @@
             android:id="@+id/tv_equals"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" = "
+            android:text="@string/equals"
             app:layout_constraintStart_toEndOf="@id/tkv_number_two"
             app:layout_constraintTop_toTopOf="parent" />
-        <!--android:fontFamily="@font/roboto"-->
 
         <com.robinhood.ticker.TickerView
             android:textSize="50.0sp"
@@ -89,19 +88,19 @@
             android:visibility="visible"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2"
-            app:layout_constraintStart_toEndOf="@id/tkv_opperator"
+            android:text="@string/ticker_two"
+            app:layout_constraintStart_toEndOf="@id/tkv_operator"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.robinhood.ticker.TickerView
             android:textSize="50.0sp"
             android:typeface="monospace"
             android:textColor="@color/white_atts"
-            android:id="@+id/tkv_opperator"
+            android:id="@+id/tkv_operator"
             android:visibility="visible"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" + "
+            android:text="@string/ticker_operator"
             app:layout_constraintStart_toEndOf="@id/tkv_number_one"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -113,7 +112,7 @@
             android:visibility="visible"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2"
+            android:text="@string/ticker_one"
             android:fontFamily="monospace"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -126,7 +125,7 @@
             android:visibility="visible"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="5"
+            android:text="@string/ticker_result"
             android:fontFamily="monospace"
             app:layout_constraintStart_toEndOf="@id/tv_equals"
             app:layout_constraintTop_toTopOf="parent" />
@@ -154,12 +153,12 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:text="PLAY"
-        android:drawableLeft="@drawable/ic_play"
+        android:text="@string/button_play"
+        android:drawableStart="@drawable/ic_play"
         android:drawablePadding="10dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        app:layout_constraintBottom_toTopOf="@id/btn_statisics"
+        app:layout_constraintBottom_toTopOf="@id/btn_statistics"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         style="@style/CustomButton"
@@ -174,8 +173,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:text="Endless"
-        android:drawableLeft="@drawable/ic_endless"
+        android:text="@string/button_endless"
+        android:drawableStart="@drawable/ic_endless"
         android:drawablePadding="10dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
@@ -194,8 +193,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:text="Ranking"
-        android:drawableLeft="@drawable/ic_rankings"
+        android:text="@string/button_rankings"
+        android:drawableStart="@drawable/ic_rankings"
         android:drawablePadding="10dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
@@ -207,15 +206,15 @@
         app:layout_constraintTop_toBottomOf="@id/btn_endless" />
 
     <Button
-        android:id="@+id/btn_statisics"
+        android:id="@+id/btn_statistics"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:layout_width="0.0dip"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:text="Stats"
-        android:drawableLeft="@drawable/ic_statistics"
+        android:text="@string/button_statistics"
+        android:drawableStart="@drawable/ic_statistics"
         android:drawablePadding="10dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"

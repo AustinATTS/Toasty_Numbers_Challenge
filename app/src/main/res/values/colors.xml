@@ -15,7 +15,7 @@
     <color name="blue_atts">#0097f7</color>
     <color name="brown_atts">#4A1D00</color>
     <color name="dark_orange_atts">#AB4200</color>
-    <color name="ligh_orange_atts">#FF8D45</color>
+    <color name="light_orange_atts">#FF8D45</color>
     <color name="dark_red_atts">#AB0013</color>
     <color name="light_red_atts">#FF455A</color>
 </resources>

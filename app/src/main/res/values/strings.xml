@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Toasty Numbers Challenge</string>
+    <string name="logo_description">Toasty Numbers Challenge</string>
+    <string name="button_settings_description">SETTINGS</string>
+    <string name="button_play">Play</string>
+    <string name="button_endless">ENDLESS</string>
+    <string name="button_statistics">STATISTICS</string>
+    <string name="button_rankings">RANKINGS</string>
+    <string name="button_play_description">Play</string>
+    <string name="button_endless_description">ENDLESS</string>
+    <string name="button_statistics_description">STATISTICS</string>
+    <string name="button_rankings_description">RANKINGS</string>
+    <string name="ticker_one">2</string>
+    <string name="ticker_two">2</string>
+    <string name="ticker_result">5</string>
+    <string name="equals">" = "</string>
+    <string name="ticker_operator">" + "</string>
 </resources>
