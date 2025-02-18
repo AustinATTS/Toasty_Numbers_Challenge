@@ -10,8 +10,12 @@
     <color name="orange_atts">#F76000</color>
     <color name="black_atts">#333333</color>
     <color name="white_atts">#CCCCCC</color>
-    <color name="red_atts">#ED2939</color>
+    <color name="red_atts">#F7001C</color>
     <color name="green_atts">#3BB143</color>
-    <color name="blue_atts">#4682B4</color>
+    <color name="blue_atts">#0097f7</color>
     <color name="brown_atts">#4A1D00</color>
+    <color name="dark_orange_atts">#AB4200</color>
+    <color name="ligh_orange_atts">#FF8D45</color>
+    <color name="dark_red_atts">#AB0013</color>
+    <color name="light_red_atts">#FF455A</color>
 </resources>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:buttonStyle">@style/CustomButton</item>
+        <item name="colorAccent">@color/ligh_orange_atts</item>
+        <item name="colorPrimary">@color/orange_atts</item>
+        <item name="colorPrimaryDark">@color/dark_orange_atts</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay">
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay">
+    </style>
+
+    <style name="CustomButton">
+        <item name="android:textColor">@color/white_atts</item>
+        <item name="android:background">@drawable/btn_atts</item>
+    </style>
+
+</resources>
