@@ -1,4 +1,6 @@
 package uk.co.austinatts.toastynumberschallenge
 
-class RankingsActivity {
+import androidx.appcompat.app.AppCompatActivity
+
+class RankingsActivity: AppCompatActivity() {
 }

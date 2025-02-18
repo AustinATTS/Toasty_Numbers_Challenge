@@ -1,4 +1,6 @@
 package uk.co.austinatts.toastynumberschallenge
 
-class AccountActivity {
+import androidx.appcompat.app.AppCompatActivity
+
+class AccountActivity: AppCompatActivity() {
 }
