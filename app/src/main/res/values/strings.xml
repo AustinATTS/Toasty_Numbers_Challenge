@@ -15,4 +15,16 @@
     <string name="ticker_result">5</string>
     <string name="equals">" = "</string>
     <string name="ticker_operator">" + "</string>
+    <string name="back_arrow_description">Back\n</string>
+    <string name="auto_answer">Auto Answer</string>
+    <string name="auto_answer_description">Equations will automatically be checked as soon as enough digits have been entered.</string>
+    <string name="sound">Sound</string>
+    <string name="sound_description">Enable / Disable Sounds</string>
+    <string name="vibration">Vibration</string>
+    <string name="vibration_description">Enable / Disable Vibrations.</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="sign_in">Google Account</string>
+    <string name="sign_in_description">Sign in with Google to share your score with friends and gain access to rankings.</string>
+    <string name="reset">Reset</string>
+    <string name="reset_description">Reset all game data.</string>
 </resources>
