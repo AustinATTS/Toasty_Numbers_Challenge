@@ -27,7 +27,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".PlayActivity"
-            android:exported="false" />
+            android:noHistory="true"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".EndlessActivity"
             android:exported="false" />
