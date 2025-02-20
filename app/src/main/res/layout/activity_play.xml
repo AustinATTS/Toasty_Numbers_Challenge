@@ -1,6 +1,193 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<!--TODO Add descriptions for icons and images, update text-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_play"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/bg_atts"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pb_progress">
+
+        <TextView
+            android:textSize="50.0sp"
+            android:textColor="@color/white_atts"
+            android:id="@+id/tv_equals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/equals"
+            app:layout_constraintStart_toEndOf="@id/tkv_number_two"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.robinhood.ticker.TickerView
+            android:textSize="50.0sp"
+            android:textColor="@color/white_atts"
+            android:id="@+id/tkv_number_two"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ticker_two"
+            app:layout_constraintStart_toEndOf="@id/tkv_operator"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.robinhood.ticker.TickerView
+            android:textSize="50.0sp"
+            android:typeface="monospace"
+            android:textColor="@color/white_atts"
+            android:id="@+id/tkv_operator"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ticker_operator"
+            app:layout_constraintStart_toEndOf="@id/tkv_number_one"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.robinhood.ticker.TickerView
+            android:textSize="50.0sp"
+            android:textColor="@color/white_atts"
+            android:id="@+id/tkv_number_one"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ticker_one"
+            android:fontFamily="monospace"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:hint="@string/answer_hint"
+            android:autofillHints=""
+            android:textSize="50.0sp"
+            android:typeface="monospace"
+            android:textColor="@color/white_atts"
+            android:id="@+id/et_answer"
+            android:background="@null"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:cursorVisible="false"
+            android:text="@string/ticker_result"
+            android:ems="2"
+            android:maxLength="2"
+            android:inputType="number"
+            android:fontFamily="monospace"
+            app:layout_constraintStart_toEndOf="@id/tv_equals"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_progress"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip"
+        android:layout_width="0.0dip"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:progress="3"
+        android:max="10"
+        android:indeterminate="false"
+        android:progressDrawable="@drawable/pb_atts"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="?android:progressBarStyleHorizontal"/>
+    
+    <TextView
+        android:textSize="32.0sp"
+        android:textColor="@color/white_atts"
+        android:id="@+id/tv_seconds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="2.0dip"
+        android:text="@string/seconds"
+        app:layout_constraintEnd_toStartOf="@+id/tv_milli_seconds"
+        app:layout_constraintTop_toBottomOf="@id/pb_progress"/>
+    
+    <TextView
+        android:textSize="32.0sp"
+        android:textColor="@color/white_atts"
+        android:id="@+id/tv_incorrect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/incorrect"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pb_progress"/>
+    
+    <TextView
+        android:textSize="22.0sp"
+        android:textColor="@color/white_atts"
+        android:id="@+id/tv_milli_seconds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/milli_second"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_seconds"
+        app:layout_constraintEnd_toStartOf="@id/iv_timer"/>
+    
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@+id/cl_guideline_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.5"/>
+    
+    <ImageView
+        android:id="@+id/iv_timer"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="@string/timer_description"
+        app:layout_constraintBottom_toBottomOf="@id/tv_seconds"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_seconds"
+        app:srcCompat="@drawable/ic_timer"/>
+    
+    <ImageView
+        android:id="@+id/iv_incorrect"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_marginStart="10dp"
+        android:contentDescription="@string/incorrect_description"
+        app:layout_constraintBottom_toBottomOf="@id/tv_incorrect"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toEndOf="@id/tv_incorrect"
+        app:layout_constraintTop_toTopOf="@id/tv_incorrect"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_incorrect"/>
+
+    <View
+        android:id="@+id/v_error"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:alpha="0.7"
+        android:background="@color/red_atts"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_error"
+        android:layout_width="200.0dip"
+        android:layout_height="200.0dip"
+        android:contentDescription="@string/incorrect_description"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_incorrect" />
 </androidx.constraintlayout.widget.ConstraintLayout>

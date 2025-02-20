@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--TODO Add descriptions for icons and images, update text and fix header-->
+<!--TODO Add descriptions for icons and images, update text-->
 <androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/cl_main"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@drawable/bg_atts"
+    android:background="@drawable/bg_half_atts"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.google.android.material.appbar.AppBarLayout

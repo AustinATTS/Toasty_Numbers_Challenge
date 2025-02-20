@@ -27,4 +27,10 @@
     <string name="sign_in_description">Sign in with Google to share your score with friends and gain access to rankings.</string>
     <string name="reset">Reset</string>
     <string name="reset_description">Reset all game data.</string>
+    <string name="answer_hint">The answer to the given equation.</string>
+    <string name="seconds">2:02</string>
+    <string name="milli_second">.019</string>
+    <string name="incorrect">1</string>
+    <string name="incorrect_description">A cross to indicate questions guessed incorrectly.</string>
+    <string name="timer_description">A stop clock icon to indicate the time left.</string>
 </resources>
