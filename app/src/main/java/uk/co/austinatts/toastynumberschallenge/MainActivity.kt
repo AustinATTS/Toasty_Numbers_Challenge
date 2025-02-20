@@ -18,6 +18,9 @@ class MainActivity : AppCompatActivity() {
         binding.ibtnSettings.setOnClickListener {
             navigateToActivity(SettingsActivity::class.java)
         }
+        binding.btnPlay.setOnClickListener {
+            navigateToActivity(PlayActivity::class.java)
+        }
     }
 
     private fun navigateToActivity(activityClass: Class<*>) {
