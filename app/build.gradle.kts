@@ -7,6 +7,10 @@ android {
     namespace = "uk.co.austinatts.toastynumberschallenge"
     compileSdk = 35
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "uk.co.austinatts.toastynumberschallenge"
         minSdk = 24
